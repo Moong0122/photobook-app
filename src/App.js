@@ -21,20 +21,27 @@ class App extends React.Component {
     // state로부터 isLoading, photos 값을 받아서 저장
     const { isLoading, photos } = this.state;
     return (
-      <div>
-        {isLoading
-          ? "Loading..."
-          : photos.map(photo => (
+      <section className="container">
+        {isLoading ? (
+          <div className="loader">
+            <span className="loader__text">Loading...</span>
+          </div>
+        ) : (
+          <div className="photos">
+            {photos.map(photo => (
               <Photo
                 key={photo.id}
                 id={photo.id}
                 updated={photo.updated_at}
-                image={photo.urls.regular}
+                image={photo.urls.small}
                 name={photo.user.username}
+                bio={photo.user.bio}
                 portfolio={photo.user.portfolio_url}
               />
             ))}
-      </div>
+          </div>
+        )}
+      </section>
     );
   }
 }
