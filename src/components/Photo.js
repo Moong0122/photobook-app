@@ -1,15 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import "./Photo.css";
 
-function Photo({ key, id, updated, image, name, bio, portfolio }) {
+function Photo({ id, updated, image, name, bio, portfolio }) {
   return (
     <div className="photo">
-      <img src={image} alt={name} />
-      <div className="photo__data">
-        <h3 className="photo__title">{name}</h3>
-        <h5 className="photo__year">{updated.slice(0, 10)}</h5>
-        <h5 className="summary">{bio}</h5>
-      </div>
+      <Link
+        to={{
+          pathname: `/photo/${id}`,
+          state: { updated, name, bio, portfolio }
+        }}
+      >
+        <img src={image} alt={name} />
+      </Link>
     </div>
   );
 }
