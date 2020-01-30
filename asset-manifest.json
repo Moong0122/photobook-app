@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/photobook-app/static/css/main.5ab4e9b0.chunk.css",
+    "main.js": "/photobook-app/static/js/main.d1c28bb8.chunk.js",
+    "main.js.map": "/photobook-app/static/js/main.d1c28bb8.chunk.js.map",
+    "runtime-main.js": "/photobook-app/static/js/runtime-main.573a9f15.js",
+    "runtime-main.js.map": "/photobook-app/static/js/runtime-main.573a9f15.js.map",
+    "static/js/2.15b82b3a.chunk.js": "/photobook-app/static/js/2.15b82b3a.chunk.js",
+    "static/js/2.15b82b3a.chunk.js.map": "/photobook-app/static/js/2.15b82b3a.chunk.js.map",
+    "index.html": "/photobook-app/index.html",
+    "precache-manifest.d0db262738dd5d7f7a925d075be72f8c.js": "/photobook-app/precache-manifest.d0db262738dd5d7f7a925d075be72f8c.js",
+    "service-worker.js": "/photobook-app/service-worker.js",
+    "static/css/main.5ab4e9b0.chunk.css.map": "/photobook-app/static/css/main.5ab4e9b0.chunk.css.map",
+    "static/js/2.15b82b3a.chunk.js.LICENSE": "/photobook-app/static/js/2.15b82b3a.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.573a9f15.js",
+    "static/js/2.15b82b3a.chunk.js",
+    "static/css/main.5ab4e9b0.chunk.css",
+    "static/js/main.d1c28bb8.chunk.js"
+  ]
+}
