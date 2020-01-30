@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a4bcc2bcf83236569cbd709cc48e5b62",
+    "revision": "f314462262fb7de4979efce8b775b88d",
     "url": "/photobook-app/index.html"
   },
   {
