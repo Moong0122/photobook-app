@@ -14,3 +14,7 @@ https://github.com/facebook/react
 
 ## My result!
 http://Moong0122.github.io/photobook-app/
+
+
+---
+## 업그레이드 (기능 및 UI, UX)
