@@ -9,7 +9,17 @@ const trans = (x,y,s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) s
 
 function Photo({ id, updated, image, name, bio, portfolio }) {
   const [props, set] = useSpring(() => ({xys : [0,0,1], config: {mass:5, tension: 350, friction: 40}}));
+  // console.log(clientY, clientX);
   return (
+    <animated.div
+    className="card"
+    onMouseMove={({clientX :x, clientY:y}) => {
+      console.log(calc(x, y));
+      return set({xys:calc(x,y)});
+    }}
+    onMouseLeave={()=>set({xys:[0,0,1] })}
+    style={{transform : props.xys.interpolate(trans)}}
+  >
     <div className="photo">
       <Link
         to={{
@@ -17,16 +27,10 @@ function Photo({ id, updated, image, name, bio, portfolio }) {
           state: { updated, name, bio, portfolio }
         }}
       >
-        <animated.div
-          className="card"
-          onMouseMove={({clientX :x, clientY:y}) => set({xys:calc(x,y)})}
-          onMouseLeave={()=>set({xys:[0,0,1] })}
-          style={{transform : props.xys.interpolate(trans)}}
-        >
-          <img src={image} alt={name} />
-        </animated.div>
+      <img src={image} alt={name} />
       </Link>
-    </div>
+      </div>
+    </animated.div>
   );
 }
 
