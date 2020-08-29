@@ -4,18 +4,22 @@ import PropTypes from "prop-types";
 import { useSpring, animated } from 'react-spring';
 import "./Photo.css";
 
-const calc = (x,y) => [-(y-window.innerHeight / 2) / 20, (x-window.innerWidth / 2) / 20, 1.1];
+const calc = (x,y) => [x, y, 1.1];
 const trans = (x,y,s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-function Photo({ id, updated, image, name, bio, portfolio }) {
+function Photo({ number ,id, updated, image, name, bio, portfolio }) {
+
+  const sub = document.getElementsByClassName("photo");
   const [props, set] = useSpring(() => ({xys : [0,0,1], config: {mass:5, tension: 350, friction: 40}}));
   // console.log(clientY, clientX);
   return (
     <animated.div
     className="card"
-    onMouseMove={({clientX :x, clientY:y}) => {
+    onMouseMove={({clientX : x, clientY : y }) => {
       console.log(calc(x, y));
-      return set({xys:calc(x,y)});
+      // console.log(sub[index].getBoundingClientRect().top, sub[0].getBoundingClientRect().left);
+      console.log(number);
+      // return set({xys:calc(x,y)});
     }}
     onMouseLeave={()=>set({xys:[0,0,1] })}
     style={{transform : props.xys.interpolate(trans)}}

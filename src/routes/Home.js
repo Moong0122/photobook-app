@@ -25,12 +25,14 @@ class Home extends React.Component {
       <section className="container">
         {isLoading ? (
           <div className="loader">
+            {/* 여기에도 react-spring 적용해서 로딩창 구현하기 */}
             <span className="loader__text">Loading...</span>
           </div>
         ) : (
           <div className="photos">
-            {photos.map(photo => (
+            {photos.map((photo, index) => (
               <Photo
+                number = {index}
                 key={photo.id}
                 id={photo.id}
                 updated={photo.updated_at.slice(0, 10)}
