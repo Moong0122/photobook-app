@@ -16,14 +16,18 @@ function Photo({ number ,id, updated, image, name, bio, portfolio }) {
     <animated.div
     className="card"
     onMouseMove={({clientX : x, clientY : y}) => {
-      const targetLeftSize = targetPhoto[number].getBoundingClientRect().left;
-      let balanceTarget = 0;
-      if(targetLeftSize < window.innerWidth / 2)
-        balanceTarget = x + 1.5 * targetLeftSize;
-      else 
-        balanceTarget = x - 4.5 * (targetLeftSize - window.innerWidth / 2);
-      console.log(x,y);
-      return set({xys:calc(balanceTarget, y)});
+
+      const clientRect = targetPhoto[number].getBoundingClientRect(),
+            rectLeft = clientRect.left,
+            rectRight = clientRect.right,
+            windowCenter = window.innerWidth;
+
+      if(rectLeft < windowCenter / 2) // 1열에 있다면,
+        x += (windowCenter / 2 - rectLeft) / 2;
+      else if(rectLeft > windowCenter / 2) // 2열에 있다면,
+        x -= (rectRight - (windowCenter / 2)) / 2; 
+
+      return set({xys:calc(x, y)});
     }}
     onMouseLeave={()=>set({xys:[0,0,1] })}
     style={{transform : props.xys.interpolate(trans)}}
