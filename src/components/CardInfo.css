@@ -1,0 +1,9 @@
+.c {
+	will-change: transform, opacity;
+  }
+  
+.front,
+.back {
+	background-size: cover;
+}
+  
