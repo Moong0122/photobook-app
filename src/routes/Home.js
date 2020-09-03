@@ -21,6 +21,7 @@ class Home extends React.Component {
   render() {
     // state로부터 isLoading, photos 값을 받아서 저장
     const { isLoading, photos } = this.state;
+    
     return (
       <section className="container">
         {isLoading ? (
@@ -32,7 +33,7 @@ class Home extends React.Component {
           <div className="photos">
             {photos.map((photo, index) => (
               <Photo
-                number = {index}
+                number={index}
                 key={photo.id}
                 id={photo.id}
                 updated={photo.updated_at.slice(0, 10)}
