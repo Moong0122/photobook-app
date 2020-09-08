@@ -51,9 +51,9 @@ Photo.propTypes = {
   // urls.regular
   image: PropTypes.string.isRequired,
   // user.username, .portfolio_url
-  bio: PropTypes.string.isRequired,
+  bio: PropTypes.string,
   name: PropTypes.string.isRequired,
-  portfolio: PropTypes.string.isRequired
+  portfolio: PropTypes.string
 };
 
 export default Photo;

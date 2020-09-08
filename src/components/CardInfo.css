@@ -1,9 +1,26 @@
-.c {
-	will-change: transform, opacity;
-  }
+#card_inner {
+	position: relative;
+}
   
-.front,
+.c {
+	cursor: pointer;
+	will-change: transform, opacity;
+}
+
 .back {
 	background-size: cover;
+	background-position: center center;
+	display: block;
+}
+
+.c.front {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: whitesmoke;
+	box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 }
   

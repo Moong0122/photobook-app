@@ -12,23 +12,26 @@ function CardInfo({id, updated, image, name, bio, portfolio}){
 		config: { mass: 5, tension: 500, friction: 80 }
 	});
 	return(
-		<div onClick={()=> set(state => !state)}>
+		<div id="card_inner" onClick={()=> set(state => !state)}>
 			<a.div className="c back" style={{ opacity: opacity.interpolate(o => 1 - o), transform }} >
 				<img src={image} alt={name} />
 			</a.div>
-			<a.div class="c front" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }} >
-				<Detail 
-					name= {name}
-					id= {id}
-					updated= {updated}
-					bio= {bio}
-					portfolio= {portfolio}
-				/>
+			<a.div className="c front" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }} >
+				<div>
+					<Detail 
+						name= {name}
+						id= {id}
+						updated= {updated}
+						bio= {bio}
+						portfolio= {portfolio}
+					/>
+				</div>
 			</a.div>
 		</div>
 		
 	);
 }
+
 CardInfo.propTypes = {
 	id: PropTypes.string.isRequired,
 	updated: PropTypes.string.isRequired,
