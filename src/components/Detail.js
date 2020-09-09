@@ -8,19 +8,19 @@ function Detail({ name, updated, bio, portfolio }){
       <div>
         <b>name</b>
       </div>
-      <div>{name}</div>
+        <div>{name}</div>
       <div>
         <b>upload date</b>
       </div>
-      <div>{updated}</div>
+        <div>{updated}</div>
       <div>
         <b>bio</b>
       </div>
-      <div>{bio}</div>
+        <div>{bio == null ? "-" : bio}</div>
       <div>
         <b>portfolio</b>
       </div>
-      <div>{portfolio}</div>
+        <div>{portfolio == null ? "-" : portfolio}</div>
     </div>
   );
 }

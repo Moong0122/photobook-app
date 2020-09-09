@@ -17,15 +17,13 @@ function CardInfo({id, updated, image, name, bio, portfolio}){
 				<img src={image} alt={name} />
 			</a.div>
 			<a.div className="c front" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }} >
-				<div>
-					<Detail 
-						name= {name}
-						id= {id}
-						updated= {updated}
-						bio= {bio}
-						portfolio= {portfolio}
-					/>
-				</div>
+				<Detail
+					name= {name}
+					id= {id}
+					updated= {updated}
+					bio= {bio}
+					portfolio= {portfolio}
+				/>
 			</a.div>
 		</div>
 		

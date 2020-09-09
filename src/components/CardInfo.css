@@ -9,11 +9,10 @@
 
 .back {
 	background-size: cover;
-	background-position: center center;
-	display: block;
 }
 
 .c.front {
+	overflow: auto;
 	position: absolute;
 	left: 0;
 	top: 0;
