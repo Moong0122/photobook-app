@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "271d70e02be0bff9f675ac6885893880",
+    "revision": "4b7a0a577517f7519c4dfe49a1c2e8b5",
     "url": "/photobook-app/index.html"
   },
   {
-    "revision": "a81321a3c2b1a7d24dbf",
-    "url": "/photobook-app/static/css/main.ca095e08.chunk.css"
+    "revision": "038da197791000efdcd1",
+    "url": "/photobook-app/static/css/main.3908e1ae.chunk.css"
   },
   {
     "revision": "6ec7d6f5d8ec5f5b08e8",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/photobook-app/static/js/2.aa4c53a8.chunk.js.LICENSE"
   },
   {
-    "revision": "a81321a3c2b1a7d24dbf",
+    "revision": "038da197791000efdcd1",
     "url": "/photobook-app/static/js/main.d43bdddf.chunk.js"
   },
   {
